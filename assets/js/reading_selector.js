@@ -155,6 +155,8 @@ function ReadingSelector() {
 		'К': 'https://azbyka.ru/biblia/?Ps.{chapter}&utfcs'
 	};
 
+	this.currentDate = '';
+
 	$(document).ready(function () {
 		$me.init();
 	});
@@ -168,6 +170,15 @@ ReadingSelector.prototype.init = function () {
 	$(window).on('hashchange', function ($e) {
 		$me.choose(window.location.hash ? window.location.hash.substring(1) : '');
 	});
+
+	// Once per hour check if day has changed and automatically show "Today" button.
+	setInterval(function() {
+		$me.refreshTodayButton();
+	}, 3600 * 1000);
+};
+
+ReadingSelector.prototype.refreshTodayButton = function () {
+	$('#today-btn').toggle(moment().format('YYYY-MM-DD') !== this.currentDate);
 };
 
 ReadingSelector.prototype.getChapterUrl = function ($title) {
@@ -223,6 +234,8 @@ ReadingSelector.prototype.choose = function ($date) {
 		$kathism_offset = this.getOffset($moment, 20),
 		$reading = [];
 
+	this.currentDate = $moment.format('YYYY-MM-DD');
+
 	// Stop reading Gospel & Apostles at "22 Dec".
 	if ( $moment.month() !== 11 || $moment.date() <= 22 ) {
 		$reading = this.chapters[$chapter_offset - 1];
@@ -237,7 +250,7 @@ ReadingSelector.prototype.choose = function ($date) {
 		.text($moment.format('D MMMM YYYY'))
 		.attr('href', 'https://azbyka.ru/days/' + $moment.format('YYYY-MM-DD'));
 
-	$('#today-btn').toggle($moment.format('YYYY-MM-DD') !== moment().format('YYYY-MM-DD'));
+	this.refreshTodayButton();
 	$('#prev-day-btn').attr('href', '#' + $moment.clone().subtract(1, 'days').format('YYYY-MM-DD'));
 	$('#next-day-btn').attr('href', '#' + $moment.clone().add(1, 'days').format('YYYY-MM-DD'));
 
