@@ -6,97 +6,97 @@ function ReadingSelector() {
 	this.CHAPTER_TYPE_PSALMS = 3;
 
 	this.chapters = [
-		['Мф 1', 'Деян 1', 'Деян 2', 'К 1'],
-		['Мф 2', 'Деян 3', 'Деян 4', 'К 2'],
-		['Мф 3', 'Деян 5', 'Деян 6', 'К 3'],
-		['Мф 4', 'Деян 7', 'Деян 8', 'К 4'],
-		['Мф 5', 'Деян 9', 'Деян 10', 'К 5'],
-		['Мф 6', 'Деян 11', 'Деян 12', 'К 6'],
-		['Мф 7', 'Деян 13', 'Деян 14', 'К 7'],
-		['Мф 8', 'Деян 15', 'Деян 16', 'К 8'],
-		['Мф 9', 'Деян 17', 'Деян 18', 'К 9'],
-		['Мф 10', 'Деян 19', 'Деян 20', 'К 10'],
-		['Мф 11', 'Деян 21', 'Деян 22', 'К 11'],
-		['Мф 12', 'Деян 23', 'Деян 24', 'К 12'],
-		['Мф 13', 'Деян 25', 'Деян 26', 'К 13'],
-		['Мф 14', 'Деян 27', 'Деян 28', 'К 14'],
-		['Мф 15', 'Иак 1', 'Иак 2', 'К 15'],
-		['Мф 16', 'Иак 3', 'Иак 4', 'К 16'],
-		['Мф 17', 'Иак 5', '1 Пет 1', 'К 17'],
-		['Мф 18', '1 Пет 2', '1 Пет 3', 'К 18'],
-		['Мф 19', '1 Пет 4', '1 Пет 5', 'К 19'],
-		['Мф 20', '2 Пет 1', '2 Пет 2', 'К 20'],
-		['Мф 21', '2 Пет 3', '1 Ин 1', 'К 1'],
-		['Мф 22', '1 Ин 2', '1 Ин 3', 'К 2'],
-		['Мф 23', '1 Ин 4', '1 Ин 5', 'К 3'],
-		['Мф 24', '2 Ин 1', '3 Ин 1', 'К 4'],
-		['Мф 25', 'Иуд 1', 'Рим 1', 'К 5'],
-		['Мф 26', 'Рим 2', 'Рим 3', 'К 6'],
-		['Мф 27', 'Рим 4', 'Рим 5', 'К 7'],
-		['Мф 28', 'Рим 6', 'Рим 7', 'К 8'],
+		['Мф 1', 'Деян 1', 'Деян 2'],
+		['Мф 2', 'Деян 3', 'Деян 4'],
+		['Мф 3', 'Деян 5', 'Деян 6'],
+		['Мф 4', 'Деян 7', 'Деян 8'],
+		['Мф 5', 'Деян 9', 'Деян 10'],
+		['Мф 6', 'Деян 11', 'Деян 12'],
+		['Мф 7', 'Деян 13', 'Деян 14'],
+		['Мф 8', 'Деян 15', 'Деян 16'],
+		['Мф 9', 'Деян 17', 'Деян 18'],
+		['Мф 10', 'Деян 19', 'Деян 20'],
+		['Мф 11', 'Деян 21', 'Деян 22'],
+		['Мф 12', 'Деян 23', 'Деян 24'],
+		['Мф 13', 'Деян 25', 'Деян 26'],
+		['Мф 14', 'Деян 27', 'Деян 28'],
+		['Мф 15', 'Иак 1', 'Иак 2'],
+		['Мф 16', 'Иак 3', 'Иак 4'],
+		['Мф 17', 'Иак 5', '1 Пет 1'],
+		['Мф 18', '1 Пет 2', '1 Пет 3'],
+		['Мф 19', '1 Пет 4', '1 Пет 5'],
+		['Мф 20', '2 Пет 1', '2 Пет 2'],
+		['Мф 21', '2 Пет 3', '1 Ин 1'],
+		['Мф 22', '1 Ин 2', '1 Ин 3'],
+		['Мф 23', '1 Ин 4', '1 Ин 5'],
+		['Мф 24', '2 Ин 1', '3 Ин 1'],
+		['Мф 25', 'Иуд 1', 'Рим 1'],
+		['Мф 26', 'Рим 2', 'Рим 3'],
+		['Мф 27', 'Рим 4', 'Рим 5'],
+		['Мф 28', 'Рим 6', 'Рим 7'],
 
-		['Мк 1', 'Рим 8', 'Рим 9', 'К 9'],
-		['Мк 2', 'Рим 10', 'Рим 11', 'К 10'],
-		['Мк 3', 'Рим 12', 'Рим 13', 'К 11'],
-		['Мк 4', 'Рим 14', 'Рим 15', 'К 12'],
-		['Мк 5', 'Рим 16', '1 Кор 1', 'К 13'],
-		['Мк 6', '1 Кор 2', '1 Кор 3', 'К 14'],
-		['Мк 7', '1 Кор 4', '1 Кор 5', 'К 15'],
-		['Мк 8', '1 Кор 6', '1 Кор 7', 'К 16'],
-		['Мк 9', '1 Кор 8', '1 Кор 9', 'К 17'],
-		['Мк 10', '1 Кор 10', '1 Кор 11', 'К 18'],
-		['Мк 11', '1 Кор 12', '1 Кор 13', 'К 19'],
-		['Мк 12', '1 Кор 14', '1 Кор 15', 'К 20'],
-		['Мк 13', '1 Кор 16', '2 Кор 1', 'К 1'],
-		['Мк 14', '2 Кор 2', '2 Кор 3', 'К 2'],
-		['Мк 15', '2 Кор 4', '2 Кор 5', 'К 3'],
-		['Мк 16', '2 Кор 6', '2 Кор 7', 'К 4'],
+		['Мк 1', 'Рим 8', 'Рим 9'],
+		['Мк 2', 'Рим 10', 'Рим 11'],
+		['Мк 3', 'Рим 12', 'Рим 13'],
+		['Мк 4', 'Рим 14', 'Рим 15'],
+		['Мк 5', 'Рим 16', '1 Кор 1'],
+		['Мк 6', '1 Кор 2', '1 Кор 3'],
+		['Мк 7', '1 Кор 4', '1 Кор 5'],
+		['Мк 8', '1 Кор 6', '1 Кор 7'],
+		['Мк 9', '1 Кор 8', '1 Кор 9'],
+		['Мк 10', '1 Кор 10', '1 Кор 11'],
+		['Мк 11', '1 Кор 12', '1 Кор 13'],
+		['Мк 12', '1 Кор 14', '1 Кор 15'],
+		['Мк 13', '1 Кор 16', '2 Кор 1'],
+		['Мк 14', '2 Кор 2', '2 Кор 3'],
+		['Мк 15', '2 Кор 4', '2 Кор 5'],
+		['Мк 16', '2 Кор 6', '2 Кор 7'],
 
-		['Лк 1', '2 Кор 8', '2 Кор 9', 'К 5'],
-		['Лк 2', '2 Кор 10', '2 Кор 11', 'К 6'],
-		['Лк 3', '2 Кор 12', '2 Кор 13', 'К 7'],
-		['Лк 4', 'Гал 1', 'Гал 2', 'К 8'],
-		['Лк 5', 'Гал 3', 'Гал 4', 'К 9'],
-		['Лк 6', 'Гал 5', 'Гал 6', 'К 10'],
-		['Лк 7', 'Еф 1', 'Еф 2', 'К 11'],
-		['Лк 8', 'Еф 3', 'Еф 4', 'К 12'],
-		['Лк 9', 'Еф 5', 'Еф 6', 'К 13'],
-		['Лк 10', 'Флп 1', 'Флп 2', 'К 14'],
-		['Лк 11', 'Флп 3', 'Флп 4', 'К 15'],
-		['Лк 12', 'Кол 1', 'Кол 2', 'К 16'],
-		['Лк 13', 'Кол 3', 'Кол 4', 'К 17'],
-		['Лк 14', '1 Фес 1', '1 Фес 2', 'К 18'],
-		['Лк 15', '1 Фес 3', '1 Фес 4', 'К 19'],
-		['Лк 16', '1 Фес 5', '2 Фес 1', 'К 20'],
-		['Лк 17', '2 Фес 2', '2 Фес 3', 'К 1'],
-		['Лк 18', '1 Тим 1', '1 Тим 2', 'К 2'],
-		['Лк 19', '1 Тим 3', '1 Тим 4', 'К 3'],
-		['Лк 20', '1 Тим 5', '1 Тим 6', 'К 4'],
-		['Лк 21', '2 Тим 1', '2 Тим 2', 'К 5'],
-		['Лк 22', '2 Тим 3', '2 Тим 4', 'К 6'],
-		['Лк 23', 'Тит 1', 'Тит 2', 'К 7'],
-		['Лк 24', 'Тит 3', 'Флм 1', 'К 8'],
-		['Ин 1', 'Евр 1', 'Евр 2', 'К 9'],
-		['Ин 2', 'Евр 3', 'Евр 4', 'К 10'],
-		['Ин 3', 'Евр 5', 'Евр 6', 'К 11'],
-		['Ин 4', 'Евр 7', 'Евр 8', 'К 12'],
-		['Ин 5', 'Евр 9', 'Евр 10', 'К 13'],
-		['Ин 6', 'Евр 11', 'Евр 12', 'К 14'],
-		['Ин 7', 'Евр 13', 'Откр 1', 'К 15'],
-		['Ин 8', 'Откр 2', 'Откр 3', 'К 16'],
-		['Ин 9', 'Откр 4', 'Откр 5', 'К 17'],
-		['Ин 10', 'Откр 6', 'Откр 7', 'К 18'],
-		['Ин 11', 'Откр 8', 'Откр 9', 'К 19'],
-		['Ин 12', 'Откр 10', 'Откр 11', 'К 20'],
-		['Ин 13', 'Откр 12', 'Откр 13', 'К 1'],
-		['Ин 14', 'Откр 14', 'Откр 15', 'К 2'],
-		['Ин 15', 'Откр 16', 'К 3'],
-		['Ин 16', 'Откр 17', 'К 4'],
-		['Ин 17', 'Откр 18', 'К 5'],
-		['Ин 18', 'Откр 19', 'К 6'],
-		['Ин 19', 'Откр 20', 'К 7'],
-		['Ин 20', 'Откр 21', 'К 8'],
-		['Ин 21', 'Откр 22', 'К 9']
+		['Лк 1', '2 Кор 8', '2 Кор 9'],
+		['Лк 2', '2 Кор 10', '2 Кор 11'],
+		['Лк 3', '2 Кор 12', '2 Кор 13'],
+		['Лк 4', 'Гал 1', 'Гал 2'],
+		['Лк 5', 'Гал 3', 'Гал 4'],
+		['Лк 6', 'Гал 5', 'Гал 6'],
+		['Лк 7', 'Еф 1', 'Еф 2'],
+		['Лк 8', 'Еф 3', 'Еф 4'],
+		['Лк 9', 'Еф 5', 'Еф 6'],
+		['Лк 10', 'Флп 1', 'Флп 2'],
+		['Лк 11', 'Флп 3', 'Флп 4'],
+		['Лк 12', 'Кол 1', 'Кол 2'],
+		['Лк 13', 'Кол 3', 'Кол 4'],
+		['Лк 14', '1 Фес 1', '1 Фес 2'],
+		['Лк 15', '1 Фес 3', '1 Фес 4'],
+		['Лк 16', '1 Фес 5', '2 Фес 1'],
+		['Лк 17', '2 Фес 2', '2 Фес 3'],
+		['Лк 18', '1 Тим 1', '1 Тим 2'],
+		['Лк 19', '1 Тим 3', '1 Тим 4'],
+		['Лк 20', '1 Тим 5', '1 Тим 6'],
+		['Лк 21', '2 Тим 1', '2 Тим 2'],
+		['Лк 22', '2 Тим 3', '2 Тим 4'],
+		['Лк 23', 'Тит 1', 'Тит 2'],
+		['Лк 24', 'Тит 3', 'Флм 1'],
+		['Ин 1', 'Евр 1', 'Евр 2'],
+		['Ин 2', 'Евр 3', 'Евр 4'],
+		['Ин 3', 'Евр 5', 'Евр 6'],
+		['Ин 4', 'Евр 7', 'Евр 8'],
+		['Ин 5', 'Евр 9', 'Евр 10'],
+		['Ин 6', 'Евр 11', 'Евр 12'],
+		['Ин 7', 'Евр 13', 'Откр 1'],
+		['Ин 8', 'Откр 2', 'Откр 3'],
+		['Ин 9', 'Откр 4', 'Откр 5'],
+		['Ин 10', 'Откр 6', 'Откр 7'],
+		['Ин 11', 'Откр 8', 'Откр 9'],
+		['Ин 12', 'Откр 10', 'Откр 11'],
+		['Ин 13', 'Откр 12', 'Откр 13'],
+		['Ин 14', 'Откр 14', 'Откр 15'],
+		['Ин 15', 'Откр 16'],
+		['Ин 16', 'Откр 17'],
+		['Ин 17', 'Откр 18'],
+		['Ин 18', 'Откр 19'],
+		['Ин 19', 'Откр 20'],
+		['Ин 20', 'Откр 21'],
+		['Ин 21', 'Откр 22']
 	];
 
 	this.kathismaToPsalmsMapping = {
@@ -163,17 +163,11 @@ function ReadingSelector() {
 ReadingSelector.prototype.init = function () {
 	var $me = this;
 
-	if ( window.location.hash ) {
-		$me.onAnchorChanged(window.location.hash.substring(1));
-	}
+	$me.choose(window.location.hash ? window.location.hash.substring(1) : '');
 
 	$(window).on('hashchange', function ($e) {
-		$me.onAnchorChanged(window.location.hash ? window.location.hash.substring(1) : '');
+		$me.choose(window.location.hash ? window.location.hash.substring(1) : '');
 	});
-};
-
-ReadingSelector.prototype.onAnchorChanged = function ($anchor) {
-	console.log('anchor changed to: ', $anchor);
 };
 
 ReadingSelector.prototype.getChapterUrl = function ($title) {
@@ -198,7 +192,7 @@ ReadingSelector.prototype.getChapterType = function ($title) {
 	if ( $parsed[0] === 'К' ) {
 		return this.CHAPTER_TYPE_PSALMS;
 	}
-	else if ( $.inArray($parsed[0], ['Мф', 'Мк', 'Лк', 'Ин']) ) {
+	else if ( $.inArray($parsed[0], ['Мф', 'Мк', 'Лк', 'Ин']) !== -1 ) {
 		return this.CHAPTER_TYPE_GOSPEL;
 	}
 
@@ -223,14 +217,98 @@ ReadingSelector.prototype.parseChapterTitle = function ($title) {
 	return [$prefix, $suffix];
 };
 
-ReadingSelector.prototype.choose = function () {
-	/*
-		Choosing concept:
-		1. the "Feb 29" is always free to avoid schedule shift once in 4 years, when it happens
-		2. reading of Gospel/Apostles ends 22 dec, but we continue to read kathisms alone for 5 more days
+ReadingSelector.prototype.choose = function ($date) {
+	var $moment = moment($date || undefined),
+		$chapter_offset = this.getOffset($moment, this.chapters.length),
+		$kathism_offset = this.getOffset($moment, 20),
+		$reading = [];
 
-		TODO:
-		1. figure out a formula that would based on given day (no cycles or hardcoded lists) get desired offset
-		2. move kathism choosing into separate method so that we can rotate them independently of Gospel/Apostles
-	 */
+	// Stop reading Gospel & Apostles at "22 Dec".
+	if ( $moment.month() !== 11 || $moment.date() <= 22 ) {
+		$reading = this.chapters[$chapter_offset - 1];
+	}
+
+	// Stop reading Psalms at "27 Dec".
+	if ( $moment.month() !== 11 || $moment.date() <= 27 ) {
+		$reading.push('К ' + $kathism_offset);
+	}
+
+	$('#date-container')
+		.text($moment.format('D MMMM YYYY'))
+		.attr('href', 'https://azbyka.ru/days/' + $moment.format('YYYY-MM-DD'));
+
+	$('#today-btn').toggle($moment.format('YYYY-MM-DD') !== moment().format('YYYY-MM-DD'));
+	$('#prev-day-btn').attr('href', '#' + $moment.clone().subtract(1, 'days').format('YYYY-MM-DD'));
+	$('#next-day-btn').attr('href', '#' + $moment.clone().add(1, 'days').format('YYYY-MM-DD'));
+
+	this.replaceReading($reading);
+};
+
+ReadingSelector.prototype.replaceReading = function ($reading) {
+	var $me = this,
+		$gospel_container = $('#gospel-container'),
+		$apostles_container = $('#apostles-container'),
+		$psalms_container = $('#psalms-container');
+
+	$gospel_container.text('-');
+	$apostles_container.text('-');
+	$psalms_container.text('-');
+
+	$.each($reading, function ($index, $title) {
+		var $chapter_type = $me.getChapterType($title),
+			$chapter_link = $(
+				'<a>',
+				{
+					href: $me.getChapterUrl($title),
+					target: '_blank',
+					title: $me.getChapterHint($chapter_type),
+					text: $title
+				}
+			);
+
+		if ( $chapter_type === $me.CHAPTER_TYPE_GOSPEL ) {
+			$gospel_container.empty().append($chapter_link);
+		}
+		else if ( $chapter_type === $me.CHAPTER_TYPE_PSALMS ) {
+			$psalms_container.empty().append($chapter_link);
+		}
+		else if ( $chapter_type === $me.CHAPTER_TYPE_APOSTLES ) {
+			if ( $apostles_container.text() === '-' ) {
+				$apostles_container.empty().append($chapter_link);
+			}
+			else {
+				$apostles_container.append(', ').append($chapter_link);
+			}
+		}
+	});
+};
+
+ReadingSelector.prototype.getChapterHint = function ($chapter_type) {
+	if ( $chapter_type === this.CHAPTER_TYPE_GOSPEL ) {
+		return 'Читать главу из Евангелия';
+	}
+	else if ( $chapter_type === this.CHAPTER_TYPE_APOSTLES ) {
+		return 'Читать главу из Апостола';
+	}
+	else if ( $chapter_type === this.CHAPTER_TYPE_PSALMS ) {
+		return 'Читать кафизму из Псалтири';
+	}
+
+	return '';
+};
+
+ReadingSelector.prototype.getOffset = function ($moment, $sequence_length) {
+	var $offset = $moment.dayOfYear() % $sequence_length;
+
+	// Ignore "February 29" in leap years.
+	if ( $moment.isLeapYear() && $moment.month() > 1 ) {
+		$offset -= 1;
+	}
+
+	// No division reminder means last element in the sequence.
+	if ( $offset === 0 ) {
+		$offset = $sequence_length;
+	}
+
+	return $offset;
 };

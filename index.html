@@ -16,16 +16,23 @@
 			<h1>Ежедневное чтение Библии</h1>
 
 			<div class="card bg-light mb-3" style="max-width: 18rem;">
-				<div class="card-header"><a href="https://azbyka.ru/days/2019-06-28" target="_blank" title="Календарь">28 июня 2019</a></div>
+				<div class="card-header"><a href="#" target="_blank" id="date-container" title="Календарь"></a></div>
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item">Евангелие: <a href="https://azbyka.ru/biblia/?Mt.1&utfcs" target="_blank" title="Читать главу из Евангелия">Мф 1</a></li>
-					<li class="list-group-item">Апостол: <a href="https://azbyka.ru/biblia/?Act.1&utfcs" target="_blank" title="Читать главу из Апостола">Деян 1</a>, <a href="https://azbyka.ru/biblia/?Act.2&utfcs" target="_blank" title="Читать главу из Апостола">Деян 2</a></li>
-					<li class="list-group-item">Псалтирь: <a href="https://azbyka.ru/biblia/?Ps.1-8&utfcs" target="_blank" title="Читать кафизму из Псалтири">К 1</a></li>
+					<li class="list-group-item">
+						Евангелие: <span id="gospel-container"></span>
+					</li>
+					<li class="list-group-item">
+						Апостол: <span id="apostles-container"></span>
+					</li>
+					<li class="list-group-item">
+						Псалтирь: <span id="psalms-container"></span>
+					</li>
 				</ul>
 
-				<nav class="card-footer clearfix">
-					<a href="#2019-06-27" class="btn btn-secondary float-left" role="button" title="Предыдущий день">&lt;</a>
-					<a href="#2019-06-29" class="btn btn-secondary float-right" role="button" title="Следующий день">&gt;</a>
+				<nav class="card-footer text-center clearfix">
+					<a href="#" class="btn btn-secondary float-left" id="prev-day-btn" role="button" title="Предыдущий день">&lt;</a>
+					<a href="#" class="btn btn-primary" id="today-btn" role="button" style="display: none;">Сегодня</a>
+					<a href="#" class="btn btn-secondary float-right" id="next-day-btn" role="button" title="Следующий день">&gt;</a>
 				</nav>
 			</div>
 
@@ -62,16 +69,13 @@
 		<script src="assets/vendor/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="assets/vendor/js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="assets/vendor/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="assets/vendor/js/moment.min.js"></script>
+		<script src="assets/vendor/js/moment_locales/ru.js"></script>
 		<script src="assets/js/reading_selector.js?2019-06-28"></script>
 
 		<script>
 			(function () {
-				var $rs = new ReadingSelector();
-
-				console.log($rs.getChapterUrl('Мф 5'));
-				console.log($rs.getChapterUrl('Деян 12'));
-				console.log($rs.getChapterUrl('1 Кор 7'));
-				console.log($rs.getChapterUrl('К 4'));
+				new ReadingSelector();
 			}());
 		</script>
 	</body>
