@@ -156,6 +156,7 @@ function ReadingSelector() {
 	};
 
 	this.currentDate = '';
+	this.pageTitleFormat = '{date} - Ежедневное чтение Библии';
 
 	$(document).ready(function () {
 		$me.init();
@@ -230,6 +231,7 @@ ReadingSelector.prototype.parseChapterTitle = function ($title) {
 
 ReadingSelector.prototype.choose = function ($date) {
 	var $moment = moment($date || undefined),
+		$date_formatted = $moment.format('D MMMM YYYY'),
 		$chapter_offset = this.getOffset($moment, this.chapters.length),
 		$kathism_offset = this.getOffset($moment, 20),
 		$reading = [];
@@ -247,14 +249,18 @@ ReadingSelector.prototype.choose = function ($date) {
 	}
 
 	$('#date-container')
-		.text($moment.format('D MMMM YYYY'))
-		.attr('href', 'https://azbyka.ru/days/' + $moment.format('YYYY-MM-DD'));
+		.text($date_formatted)
+		.attr('href', 'https://azbyka.ru/days/' + this.currentDate);
+
+	window.document.title = this.pageTitleFormat.replace('{date}', $date_formatted);
 
 	this.refreshTodayButton();
 	$('#prev-day-btn').attr('href', '#' + $moment.clone().subtract(1, 'days').format('YYYY-MM-DD'));
 	$('#next-day-btn').attr('href', '#' + $moment.clone().add(1, 'days').format('YYYY-MM-DD'));
 
 	this.replaceReading($reading);
+
+	history.replaceState({date: this.currentDate}, '');
 };
 
 ReadingSelector.prototype.replaceReading = function ($reading) {
