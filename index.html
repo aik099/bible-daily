@@ -19,6 +19,14 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="alert alert-primary js-update-notification" role="alert" style="display: none;">
+				Доступно обновление. <a href="#" class="alert-link" id="btn-reload-app">Нажмите сюда</a>, чтобы его установить!
+
+				<button type="button" class="close" data-dismiss="alert" aria-label="Закрыть">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
 			<article>
 				<h1>Ежедневное чтение Библии</h1>
 
@@ -86,11 +94,6 @@
 		<script src="assets/vendor/js/moment.min.js"></script>
 		<script src="assets/vendor/js/moment_locales/ru.js"></script>
 		<script src="assets/js/reading_selector.js?2019-06-29"></script>
-
-		<script>
-			(function () {
-				new ReadingSelector();
-			}());
-		</script>
+		<script src="assets/js/main.js?2019-06-29"></script>
 	</body>
 </html>
