@@ -172,10 +172,9 @@ ReadingSelector.prototype.init = function () {
 		$me.choose(window.location.hash ? window.location.hash.substring(1) : '');
 	});
 
-	// Once per hour check if day has changed and automatically show "Today" button.
-	setInterval(function() {
+	$(document).on('visibilitychange', function ($e) {
 		$me.refreshTodayButton();
-	}, 3600 * 1000);
+	});
 };
 
 ReadingSelector.prototype.refreshTodayButton = function () {
