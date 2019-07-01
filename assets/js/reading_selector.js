@@ -157,6 +157,7 @@ function ReadingSelector() {
 
 	this.currentDate = '';
 	this.pageTitleFormat = '{date} - Ежедневное чтение Библии';
+	this.todayButton = undefined;
 
 	$(document).ready(function () {
 		$me.init();
@@ -165,6 +166,19 @@ function ReadingSelector() {
 
 ReadingSelector.prototype.init = function () {
 	var $me = this;
+
+	this.todayButton = $('#today-btn');
+
+	this.todayButton.click(function ($e) {
+		// Hash will change > automatic content update.
+		if ( window.location.hash !== '' ) {
+			return;
+		}
+
+		// Hash not changed > update content manually.
+		$e.preventDefault();
+		$me.choose();
+	});
 
 	$me.choose(window.location.hash ? window.location.hash.substring(1) : '');
 
@@ -178,7 +192,7 @@ ReadingSelector.prototype.init = function () {
 };
 
 ReadingSelector.prototype.refreshTodayButton = function () {
-	$('#today-btn').toggle(moment().format('YYYY-MM-DD') !== this.currentDate);
+	this.todayButton.toggle(moment().format('YYYY-MM-DD') !== this.currentDate);
 };
 
 ReadingSelector.prototype.getChapterUrl = function ($title) {
