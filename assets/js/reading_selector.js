@@ -244,7 +244,7 @@ ReadingSelector.prototype.parseChapterTitle = function ($title) {
 
 ReadingSelector.prototype.choose = function ($date) {
 	var $moment = moment($date || undefined),
-		$date_formatted = $moment.format('D MMMM YYYY'),
+		$date_formatted = $moment.format('D MMMM YYYY (dddd)'),
 		$chapter_offset = this.getOffset($moment, this.chapters.length),
 		$kathism_offset = this.getOffset($moment, 20),
 		$reading = [];

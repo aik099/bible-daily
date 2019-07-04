@@ -1,11 +1,11 @@
 "use strict";
 
-var CACHE_VERSION = 'v5';
+var CACHE_VERSION = 'v6';
 var CACHE_NAME = 'bible_daily_cache';
 
 var urlsToCache = [
 	'assets/js/main.js?2019-06-29',
-	'assets/js/reading_selector.js?2019-07-01',
+	'assets/js/reading_selector.js?2019-07-04',
 	'assets/vendor/css/bootstrap.min.css',
 	'assets/vendor/js/bootstrap.min.js',
 	'assets/vendor/js/jquery-3.3.1.slim.min.js',
