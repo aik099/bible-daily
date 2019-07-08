@@ -1,6 +1,6 @@
 "use strict";
 
-var CACHE_VERSION = 'v7';
+var CACHE_VERSION = 'v8';
 var CACHE_NAME = 'bible_daily_cache';
 
 var urlsToCache = [
